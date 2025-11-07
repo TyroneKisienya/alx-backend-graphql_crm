@@ -1,5 +1,5 @@
 """
-ASGI config for alx_backend_graphql_crm project.
+ASGI config for alx_backend_graphql project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

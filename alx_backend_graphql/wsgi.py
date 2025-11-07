@@ -1,5 +1,5 @@
 """
-WSGI config for alx_backend_graphql_crm project.
+WSGI config for alx_backend_graphql project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
