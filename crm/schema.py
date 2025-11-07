@@ -174,3 +174,9 @@ class Mutation(graphene.ObjectType):
     bulk_create_customer = BulkCreateCustomer.Field()
     create_product = CreateProducts.Field()
     create_order = CreateOrder.Field()
+
+class Query(graphene.ObjectType):
+    all_customers= graphene.List(CustomerType)
+
+    def resolver_all_customers(self, info):
+        return Customer.objects.all()
