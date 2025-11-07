@@ -70,6 +70,7 @@ class CreateCustomer(graphene.Mutation):
             email=input.email,
             phone=input.phone
         )
+        customer.save()
 
         return CreateCustomer(customer=customer, message="Customer created successfully.")
 
@@ -158,6 +159,7 @@ class CreateOrder(graphene.Mutation):
             total_amount=total
         )
         order.products.set(products)
+        order.save()
 
         return CreateOrder(order=order)
 
