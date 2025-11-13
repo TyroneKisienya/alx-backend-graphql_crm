@@ -102,6 +102,7 @@ repolib==2.2.1
 repoman==1.4.0
 requests==2.25.1
 requests-file==3.0.1
+requests-toolbelt
 SecretStorage==3.3.1
 sessioninstaller==0.0.0
 six==1.16.0
