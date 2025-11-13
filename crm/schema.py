@@ -176,7 +176,7 @@ class Query(graphene.ObjectType):
     all_customers = DjangoFilterConnectionField(CustomerType, order_by=graphene.List(of_type=graphene.String))
     all_products = DjangoFilterConnectionField(ProductType,order_by=graphene.List(of_type=graphene.String))
     all_orders = DjangoFilterConnectionField(OrderType, order_by=graphene.List(of_type=graphene.String))
-
+    hello= graphene.String(descripton="I am alive")
     def resolve_all_customers(self, info, order_by=None, **kwargs):
         qs = Customer.objects.all()
         if order_by:
@@ -194,6 +194,9 @@ class Query(graphene.ObjectType):
         if order_by:
             qs = qs.order_by(*order_by)
         return qs
+    
+    def resolver_hello(self, info):
+        return "I am living"
 
 
 class Mutation(graphene.ObjectType):
