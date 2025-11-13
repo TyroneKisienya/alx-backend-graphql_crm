@@ -48,7 +48,7 @@ def update_low_stock():
     mutation= gql(
         """
             mutation {
-                updatedLowStockProducts {
+                updateLowStockProducts {
                     updatedProducts {
                         name
                         stock
@@ -61,7 +61,7 @@ def update_low_stock():
 
     try:
         response = client.execute(mutation)
-        data = response.get("updatedLowStockProducts", {})
+        data = response.get("updateLowStockProducts", {})
         products = data.get("updatedProducts", [])
         message = data.get("message", "No message returned")
 
